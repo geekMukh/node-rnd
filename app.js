@@ -3,12 +3,19 @@ console.log("Starting app.js");
 const fs = require("fs");
 const os = require("os");
 const _ = require("lodash");
+const yargs = require("yargs").argv;
 const notes = require("./notes");
+
+const argv = yargs;
+
+const argument = process.argv[2];
+
+console.log("argument ::::", argv);
 
 // console.log(_.isString("abc"));
 // console.log(_.isString(123546));
-var filteredArray = ['hello',12,21,12,'hello'];
-console.log(_.uniq(filteredArray))
+var filteredArray = ["hello", 12, 21, 12, "hello"];
+console.log(_.uniq(filteredArray));
 
 // const res = notes.addNotes(2, 2);
 // console.log(res);
